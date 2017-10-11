@@ -1,0 +1,24 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.spacing {
+  margin: 40px;
+}
+
+.spacing-top {
+  margin: 10px 0;
+}
+
+.wrapper-form {
+  max-width: 350px;
+}
+
+.container-wrapper {
+  margin: 0 auto;
+}

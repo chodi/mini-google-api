@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  div.jumbotron
+    .row
+      img(src=person.picture, height='150', width='150')
+      .col
+        h3 #{person.name}
+        p Gender: #{person.gender}
+        p E-mail: #{person.email}
+  each email, i in newMEssages
+    div.jumbotron
+      h3 #{email.header}
+      p!= email.messageBody

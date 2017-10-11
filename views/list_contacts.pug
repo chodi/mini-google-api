@@ -1,0 +1,22 @@
+extends layout
+
+block content
+
+  h1 Services
+  p
+    | Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur Excepteur sint occaecat cupidatat non
+    proident sunt in culpa qui officia deserunt mollit anim id est laborum
+
+  each connection, i in connections
+    div.jumbotron
+      .row
+        img(src=connection.photos[0].url, height='70', width='70')
+        .col
+          h3 #{connection.names[0].displayName}
+          p #{connection.phoneNumbers[0].value}
+      p
+        | Details: #{connection.names[0].givenName}

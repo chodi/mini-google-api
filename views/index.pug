@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  .container-wrapper
+  div.wrapper-form.spacing
+    form.form-signin(action='/url', method='post')
+      h2.form-signin-heading Enter URL
+      label.sr-only(for='url') URL
+      input#url.form-control(name='url', type='text', placeholder='URL', required='', autofocus, error='add some links')
+      div.spacing-top
+        button.btn.btn-lg.btn-primary.btn-block(type='submit') Submit
+
+  div.wrapper-form.spacing
+    form.form-signin(action='/list_contact_authUrl', method='get')
+      label(for='page') Show People-contact
+      input#contact.form-control(name='page', type='text', placeholder='Contacts', value='contact', disabled)
+      div.spacing-top
+        button.btn.btn-lg.btn-primary.btn-block(type='submit') show Contacts
+
+  div.wrapper-form.spacing
+    form.form-signin(action='/list_ids_authUrl', method='get')
+      label(for='page') Show Email
+      input#contact.form-control(name='page', type='text', placeholder='email-ids', value='email_ids', disabled)
+      div.spacing-top
+        button.btn.btn-lg.btn-primary.btn-block(type='submit') E-mails
+
+
